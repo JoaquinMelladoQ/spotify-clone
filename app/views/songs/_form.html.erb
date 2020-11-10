@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= form.hidden_field :playlist_id, value: params[:playlist_id] %>
+
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
