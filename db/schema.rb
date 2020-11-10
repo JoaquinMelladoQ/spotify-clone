@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_10_002146) do
+ActiveRecord::Schema.define(version: 2020_11_10_002931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 2020_11_10_002146) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "playlist_id"
+    t.index ["playlist_id"], name: "index_songs_on_playlist_id"
   end
 
+  add_foreign_key "songs", "playlists"
 end
