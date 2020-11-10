@@ -15,6 +15,7 @@ class PlaylistsController < ApplicationController
   # GET /playlists/new
   def new
     @playlist = Playlist.new
+    @playlist.songs.build
   end
 
   # GET /playlists/1/edit
@@ -69,6 +70,6 @@ class PlaylistsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def playlist_params
-      params.require(:playlist).permit(:name)
+      params.require(:playlist).permit(:name, songs_attributes: [:title])
     end
 end

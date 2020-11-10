@@ -16,6 +16,15 @@
     <%= form.text_field :name %>
   </div>
 
+  <h3>Song</h3>
+
+  <div>
+    <%= form.fields_for :songs do |ff| %>
+      <%= ff.label :title %>
+      <%= ff.text_field :title %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
