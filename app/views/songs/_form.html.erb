@@ -16,6 +16,11 @@
     <%= form.text_field :title %>
   </div>
 
+  <div class="field">
+    <%= form.label :playlist_id %>
+    <%= form.select :playlist_id, optional_from_collection_for_select() %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
