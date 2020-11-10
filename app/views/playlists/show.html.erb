@@ -5,5 +5,13 @@
   <%= @playlist.name %>
 </p>
 
+<h4>Canciones</h4>
+
+<ul>
+  <% @playlist.songs.each do |song| %>
+    <li><%= song.title %> </li>      
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
 <%= link_to 'Back', playlists_path %>
