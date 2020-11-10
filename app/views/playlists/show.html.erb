@@ -9,7 +9,7 @@
 
 <ul>
   <% @playlist.songs.each do |song| %>
-    <li><%= song.title %> </li>      
+    <li><%= song.title %> <%= link_to 'ver', playlist_song_path(@playlist.id, song.id) %> </li>      
   <% end %>
 </ul>
 
