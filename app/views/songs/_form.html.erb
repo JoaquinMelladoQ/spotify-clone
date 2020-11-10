@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :playlist_id %>
-    <%= form.select :playlist_id, optional_from_collection_for_select(@playlists, :id, :name), prompt: 'selecciona la playlist' %>
+    <%= form.select :playlist_id, options_from_collection_for_select(@playlists, :id, :name), prompt: 'selecciona la playlist' %>
   </div>
 
   <div class="actions">
